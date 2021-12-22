@@ -1,0 +1,64 @@
+:root {
+    --primary-darkblue: #06154A;
+    --terciary-skyblue: #1CA0FF;
+}
+
+.header {
+    background: url("../res/assets/Portrait-vs-Landscape-Featured-Image-3.jpg") ;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    height: 450px;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    background-color: rgba(128, 128, 128, 0.6);
+    top: 0px;
+}
+
+.navbar div {
+    display: flex;
+    height: inherit;
+}
+
+.nav-list {
+    display: inline-flex;
+    width: 500px;
+    margin-block: auto;
+    justify-content: space-around;
+}
+
+#domain-name::after {
+    content: ".dev";
+    color: var(--terciary-skyblue);
+}
+
+.profile-picture, .icon {
+    border-radius: 100%;
+}
+
+#profile-container {
+    margin: auto;
+    display: block;
+}
+
+#profile-name, .navbar {
+    text-align: center;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: medium;
+}
+
+#profile-name {
+    font-size: medium;
+}
+
+main {
+    margin-inline: 5px;
+    height: 700px;
+}
