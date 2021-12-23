@@ -1,21 +1,21 @@
 import React, { createElement } from "react";
 import Header from "./components/base/Header";
-import './styles/App.css';
 import Navbar, { NavListItems } from "./components/base/Navbar";
-import CircleImageContainer from "./components/CircleImage";
+import CircleImage from "./components/CircleImage";
+import facebook from './res/assets/icons/facebook_icon_128.png';
+import github from './res/assets/icons/github_icon_128.png';
+import linkedin from './res/assets/icons/linkedin_icon_128.png';
+import descImage from './res/images/desc-picture.jpg';
+import image from './res/images/profile-picture.jpg';
+import './styles/App.css';
 
-import image from './res/assets/profile-picture.jpg';
-import github from './res/assets/github_icon_128.png'
-import facebook from './res/assets/facebook_icon_128.png'
-import linkedin from './res/assets/linkedin_icon_128.png'
 
 const navMenuItems = [
-    { properties: { className: "list-item", key:"home" }, children: "Home" },
-    { properties: { className: "list-item", key:"aboutme" }, children: "About me" },
-    { properties: { className: "list-item", key:"whatido" }, children: "What I Do" },
-    { properties: { className: "list-item", key:"portfolio" }, children: "Portfolio" }
+    { properties: { className: "list-item", key: "home" }, children: "Home" },
+    { properties: { className: "list-item", key: "aboutme" }, children: "About me" },
+    { properties: { className: "list-item", key: "whatido" }, children: "What I Do" },
+    { properties: { className: "list-item", key: "portfolio" }, children: "Portfolio" }
 ]
-
 
 const socialNetworks = [
     { title: "Github", properties: { imgSrc: github, className: "icon" } },
@@ -23,6 +23,16 @@ const socialNetworks = [
     { title: "Facebook", properties: { imgSrc: facebook, className: "icon" } },
 ]
 
+const contactInfo = [
+    "name: Brandon Isaac Fonseca",
+    "Title: Software Developer",
+    "Email: isaac99.bf@gmail.com",
+    "Phone: (505) 850 383 65",
+    "Experience: 3 years",
+    "Age: 23",
+    "Address: Chontales, Nicaragua",
+    "Github: github.com/fonse99",
+]
 const App = () => {
     return (
 
@@ -46,11 +56,11 @@ const App = () => {
                     <div id={"social-network-container"}>
                         {
                             socialNetworks.map(e => {
-                                return createElement(CircleImageContainer, e.properties)
+                                return createElement(CircleImage, e.properties)
                             })
                         }
                     </div>
-                    <CircleImageContainer
+                    <CircleImage
                         className={"profile-picture"}
                         imgSrc={image}
                         size={{ w: 250, h: 250 }}
@@ -62,7 +72,38 @@ const App = () => {
             </Header>
 
             <main>
-                
+                <div className={"piece-container"}>
+
+                    <CircleImage
+                        className={"desc-picture"}
+                        imgSrc={descImage} />
+
+                    <article>
+
+                        <h2 className={"text-bigger"}>
+                            {"Hi I'm Brandon!, this is about me.   "}
+                        </h2>
+                        <p className={"text-smaller"}>
+                            {"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum."}
+                        </p>
+                        <div className={"contact-card"}>
+                            {
+                                contactInfo.map(e => {
+                                    return createElement("h5", null, e)
+                                })
+                            }
+                        </div>
+                    </article>
+                </div>
+                <div className="piece-container-secondary">
+
+                    <article>
+                        <h2 className={"text-bigger"}>
+                            {"What I do"}
+                        </h2>
+                    </article>
+
+                </div>
             </main>
         </div>
     );

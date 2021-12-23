@@ -1,7 +1,8 @@
 :root {
     --primary-darkblue: #06154A;
+    --secondary-blue: #1D3384;
 }
 
 body {
-    background-color: var(--primary-darkblue);
+    background-color: var(--secondary-blue);
 }

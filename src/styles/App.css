@@ -1,10 +1,35 @@
 :root {
     --primary-darkblue: #06154A;
+    --secondary-blue: #1D3384;
     --terciary-skyblue: #1CA0FF;
+    --tipografy-style: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+#domain-name::after {
+    content: ".dev";
+    color: var(--terciary-skyblue);
+}
+
+#profile-name {
+    font-size: medium;
+}
+
+#profile-container {
+    margin: auto;
+    display: block;
+}
+
+#profile-name, .navbar {
+    text-align: center;
+    color: white;
+    font-family: var(--tipografy-style);
+    font-weight: bold;
+    font-size: medium;
 }
 
 .header {
-    background: url("../res/assets/Portrait-vs-Landscape-Featured-Image-3.jpg") ;
+    background: url("../res/images/cover-picture.jpg");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -32,33 +57,60 @@
     justify-content: space-around;
 }
 
-#domain-name::after {
-    content: ".dev";
-    color: var(--terciary-skyblue);
-}
-
 .profile-picture, .icon {
     border-radius: 100%;
 }
 
-#profile-container {
-    margin: auto;
-    display: block;
+.desc-picture {
+    border-radius: 10px;
+    height: 350px;
+    width: 280px;
 }
 
-#profile-name, .navbar {
-    text-align: center;
+.text-smaller {
     color: white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: bold;
-    font-size: medium;
 }
 
-#profile-name {
-    font-size: medium;
+.text-bigger {
+    color: white;
+    font-size: larger;
+    font-family: var(--tipografy-style);
+}
+
+.piece-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-darkblue);
+    height: 600px;
+}
+
+.piece-container-secondary {
+    
+}
+
+.contact-card {
+    display: block;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: var(--secondary-blue);
+    column-count: 2;
+    height: 200px;
+    width: 450px;
+    margin-bottom: 20px;
 }
 
 main {
     margin-inline: 5px;
-    height: 700px;
+    height: 2000px;
+}
+
+article {
+    width: 450px;
+    margin-inline: 50px;
+}
+
+h5 {
+    color: white;
 }
