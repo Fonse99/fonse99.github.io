@@ -2,6 +2,7 @@ import React, { createElement } from "react";
 import Header from "./components/base/Header";
 import Navbar, { NavListItems } from "./components/base/Navbar";
 import CircleImage from "./components/CircleImage";
+import InfoCard, { CardElements, CardSubtitle, CardTitle } from "./components/InfoCard";
 import facebook from './res/assets/icons/facebook_icon_128.png';
 import github from './res/assets/icons/github_icon_128.png';
 import linkedin from './res/assets/icons/linkedin_icon_128.png';
@@ -72,7 +73,7 @@ const App = () => {
             </Header>
 
             <main>
-                <div className={"piece-container"}>
+                <section className={"piece-container"}>
 
                     <CircleImage
                         className={"desc-picture"}
@@ -94,16 +95,34 @@ const App = () => {
                             }
                         </div>
                     </article>
-                </div>
-                <div className="piece-container-secondary">
+                </section>
+                <section className="piece-container-secondary">
 
                     <article>
                         <h2 className={"text-bigger"}>
                             {"What I do"}
                         </h2>
-                    </article>
 
-                </div>
+                        <hr />
+
+                        <div className="skills">
+                            <div className="technologies">
+                                {/* TODO */}
+                            </div>
+                            <div className="technologies-details right-section">
+                                <section>
+                                    <InfoCard >
+                                        <CardTitle />
+                                        <div id = "card-body">
+                                            <CardSubtitle />
+                                            <CardElements />
+                                        </div>
+                                    </InfoCard>
+                                </section>
+                            </div>
+                        </div>
+                    </article>
+                </section>
             </main>
         </div>
     );

@@ -6,6 +6,7 @@
     --tipografy-style: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Volkhov&display=swap');
 
 #domain-name::after {
     content: ".dev";
@@ -78,6 +79,10 @@
     font-family: var(--tipografy-style);
 }
 
+#card-body {
+    padding-inline: 20px;
+}
+
 .piece-container {
     display: flex;
     justify-content: center;
@@ -87,7 +92,22 @@
 }
 
 .piece-container-secondary {
-    
+    display: flex;
+}
+
+.skills {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 1200px;
+}
+
+.right-section {
+    justify-content: right;
+}
+
+.technologies {
+    width: 400px;
+    height: 800px;
 }
 
 .contact-card {
