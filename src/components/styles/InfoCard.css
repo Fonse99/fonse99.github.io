@@ -1,0 +1,26 @@
+.container {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    box-shadow: 0px, -4px, 4px, 4px;
+    width: 400px;
+    height: 800px;
+}
+
+#card-title {
+    font-size: x-large;
+    text-align: center;
+    padding: 15px;
+}
+
+#card-subtitle {
+    padding: 10px;
+}
+
+#card-title, #card-subtitle {
+    color: white;
+    font-family: 'Volkhov';
+}
+
+#card-title::first-letter, #card-subtitle::first-letter {
+    text-transform: uppercase;
+}
