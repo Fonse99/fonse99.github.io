@@ -1,0 +1,92 @@
+#filled-circle {
+    display: flex;
+    position: relative;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: "Volkhov";
+}
+
+#shadow {
+    position: relative;
+    width: 200px;
+    height: 50px;
+    margin-top: 20px;
+    background-color: rgb(12, 12, 53);
+    border-radius: 230%;
+}
+
+.anim-filled-circle-bouncing {
+    animation-name: bouncing;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.anim-shadow-soft-spreading {
+    animation: shadow-transform 1s linear infinite;
+}
+
+.tech-circle {
+    display: flex;
+    width: 350px;
+    position: relative;
+    top: 30px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.soft-shader {
+    background: linear-gradient(blue, rgb(6, 6, 41));
+}
+
+.soft-shadow {
+    box-shadow:
+        black 0px 40px 4px 1px;
+}
+
+@keyframes bouncing {
+    0% {
+        top: 0px;
+    }
+
+    /* 
+    25% {
+        top:5px
+    } */
+
+    50% {
+        top: 10px;
+    }
+
+    85% {
+        top: 5px;
+    }
+
+    100% {
+        top: 0px;
+    }
+}
+
+@keyframes shadow-transform {
+
+    0% {
+        width: 208px;
+    }
+
+    50% {
+        width: 200px;
+    }
+
+    85% {
+        width: 205px;
+    }
+
+    100% {
+        width: 208px;
+    }
+
+}
