@@ -1,11 +1,19 @@
 import React from "react";
 import "./styles/InfoCard.css";
 
+export const InfoCardDimensions = Object.freeze(
+    {
+        SOFT_X_EXPANSION: 'w-75',
+        COMPLETE_X_EXPANSION: 'w-100',
+        SOFT_Y_EXPANSION: 'h-75',
+        COMPLETE_Y_EXPANSION: 'h-100',
+        MOTETE: 'w-100 h-100'
+    }
+)
 
-
-const InfoCard = ({ children }) => {
+const InfoCard = ({ children, appendedClasses = "" }) => {
     return (
-        <div className="container">
+        <div className={`container ${appendedClasses}`}>
             {children}
         </div>
     )
