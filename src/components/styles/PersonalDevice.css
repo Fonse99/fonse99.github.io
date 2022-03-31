@@ -1,0 +1,43 @@
+:root {
+    --default-height: 450px;
+    --device-default-color: rgb(29, 24, 24);
+}
+
+#device-screen {
+    display: block;
+    width: 95%;
+    height: 90%;
+    margin: auto;
+}
+
+.desktop, .mobile, .tablet {
+    border-radius: 10px;
+    display: flex;
+    height: var(--default-height);
+    background-color: var(--device-default-color);
+}
+
+.desktop {
+    width: 500px;
+    height: 300px;
+}
+
+.mobile {
+    width: 250px;
+}
+
+.tablet {
+    width: 350px;
+}
+
+/*TODO fix dimensions to fill background with fullscreen image*/
+.screen-img-dimensions {
+    width: inherit;
+    height: inherit;
+    margin: auto;
+}
+
+.screen-img-fill {
+    background-image: url("https://bit.ly/3iPv7NC");
+    background-position: center;
+}
