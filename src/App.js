@@ -1,8 +1,11 @@
 import React, { createElement } from "react";
+import ArrowButton from "./components/ArrowButton";
 import Header from "./components/base/Header";
 import Navbar, { NavListItems } from "./components/base/Navbar";
 import CircleImage from "./components/CircleImage";
-import InfoCard, { CardElements, CardSubtitle, CardTitle } from "./components/InfoCard";
+import { CircleFilled } from "./components/CircleImage";
+import InfoCard, { CardElements, CardSubtitle, CardTitle, InfoCardDimensions } from "./components/InfoCard";
+import DefaultDevice from "./components/PersonalDevice";
 import facebook from './res/assets/icons/facebook_icon_128.png';
 import github from './res/assets/icons/github_icon_128.png';
 import linkedin from './res/assets/icons/linkedin_icon_128.png';
@@ -10,7 +13,7 @@ import descImage from './res/images/desc-picture.jpg';
 import image from './res/images/profile-picture.jpg';
 import './styles/App.css';
 
-
+//#region Filling information
 const navMenuItems = [
     { properties: { className: "list-item", key: "home" }, children: "Home" },
     { properties: { className: "list-item", key: "aboutme" }, children: "About me" },
@@ -34,6 +37,9 @@ const contactInfo = [
     "Address: Chontales, Nicaragua",
     "Github: github.com/fonse99",
 ]
+
+//#endregion
+
 const App = () => {
     return (
 
@@ -97,31 +103,60 @@ const App = () => {
                     </article>
                 </section>
                 <section className="piece-container-secondary">
-
-                    <article>
-                        <h2 className={"text-bigger"}>
-                            {"What I do"}
-                        </h2>
-
+                    <div>
+                        <h2 className={"text-bigger"}> {"What I do"} </h2>
                         <hr />
 
                         <div className="skills">
                             <div className="technologies">
                                 {/* TODO */}
+
+                                <div id="rotating-slider">
+
+                                    <CircleFilled
+                                        shadowed
+                                        sh_animations="anim-shadow-soft-spreading"
+                                        animations="anim-filled-circle-bouncing"
+                                        title="Backend Development"
+                                        color="blue" />
+                                </div>
                             </div>
                             <div className="technologies-details right-section">
                                 <section>
                                     <InfoCard >
                                         <CardTitle />
-                                        <div id = "card-body">
+                                        <div id="card-body">
                                             <CardSubtitle />
                                             <CardElements />
+                                        </div>
+                                        <div className="slides-control-button">
+                                            <ArrowButton orientation="left" />
+                                            <ArrowButton orientation="right" />
                                         </div>
                                     </InfoCard>
                                 </section>
                             </div>
                         </div>
-                    </article>
+                    </div>
+                    <h2 className="text-bigger">{"Portfolio"}</h2>
+
+                    <div className="portfolio">
+                        <InfoCard appendedClasses={InfoCardDimensions.COMPLETE_X_EXPANSION + " row-direction-flex"}>
+                            <CardTitle title={`Project name`} />
+
+                            <div id="device-presentation">
+                                <DefaultDevice deviceClass={"mobile"} />
+                                <DefaultDevice deviceClass={"desktop"} />
+                                <DefaultDevice deviceClass={"tablet"} />
+                            </div>
+
+                            <div className="slides-control-button">
+                                <ArrowButton orientation="left" />
+                                <ArrowButton orientation="right" />
+                            </div>
+                        </InfoCard>
+                    </div>
+
                 </section>
             </main>
         </div>

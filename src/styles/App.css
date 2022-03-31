@@ -30,6 +30,26 @@
     font-size: medium;
 }
 
+#card-body {
+    padding-inline: 20px;
+    height: 70%;
+}
+
+#rotating-slider {
+    display: inline-flex;
+    height: 100%;
+    width: 800px;
+}
+
+#device-presentation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    width: 90%;
+}
+
 .header {
     background: url("../res/images/cover-picture.jpg");
     background-size: cover;
@@ -63,6 +83,15 @@
     border-radius: 100%;
 }
 
+.slides-control-button {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-items: flex-end;
+    margin-bottom: 30px;
+    height: 15%;
+}
+
 .desc-picture {
     border-radius: 10px;
     height: 350px;
@@ -79,10 +108,6 @@
     font-family: var(--tipografy-style);
 }
 
-#card-body {
-    padding-inline: 20px;
-}
-
 .piece-container {
     display: flex;
     justify-content: center;
@@ -93,22 +118,29 @@
 
 .piece-container-secondary {
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.skills {
-    display: inline-flex;
-    justify-content: space-between;
-    width: 1200px;
+.portfolio {
+    align-self: center;
+    width: 1300px;
 }
 
 .right-section {
     justify-content: right;
 }
 
+.skills {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
 .technologies {
-    width: 400px;
     height: 800px;
 }
+
 
 .contact-card {
     display: block;
@@ -127,10 +159,6 @@ main {
     height: 2000px;
 }
 
-article {
-    width: 450px;
-    margin-inline: 50px;
-}
 
 h5 {
     color: white;
